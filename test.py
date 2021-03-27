@@ -1,8 +1,7 @@
-import torch.nn as nn
+import json
+import cv2
 
-x = nn.Sequential(nn.ReLU(), nn.ReLU())
-x.add_module("abc", nn.ReLU())
-y = nn.Sequential(nn.ReLU(), nn.ReLU())
-x.add_module("abc", y)
-print(len(x))
-print(x)
+file = "../data/data_annotated/2_0.json"
+
+with open(file, "r+") as f:
+    data = json.load(f)
